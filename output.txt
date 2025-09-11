@@ -1,0 +1,58 @@
+=== Repositories ===
+repo: dubbo, stars: 41329
+repo: echarts, stars: 64585
+repo: spark, stars: 41868
+repo: airflow, stars: 42295
+repo: superset, stars: 68004
+
+=== Contributors ===
+repo: superset, user: mistercrunch, location: San Mateo, CA, company: preset-io, contributions: 2371
+repo: superset, user: dependabot[bot], location: N/A, company: N/A, contributions: 1029
+repo: superset, user: kristw, location: San Francisco, CA, company: @airbnb , contributions: 834
+repo: superset, user: villebro, location: Palo Alto, California, company: N/A, contributions: 829
+repo: superset, user: betodealmeida, location: Key Biscayne, FL, company: @preset-io, contributions: 731
+repo: superset, user: michael-s-molina, location: Curitiba, Brazil, company: Airbnb, contributions: 697
+repo: superset, user: john-bodley, location: N/A, company: N/A, contributions: 577
+repo: superset, user: kgabryje, location: Warsaw, company: Preset, contributions: 512
+repo: superset, user: dpgaspar, location: Lisbon, Portugal, company: @preset-io @apache, contributions: 489
+repo: superset, user: rusackas, location: San Francisco, CA, company: Preset, Inc., contributions: 484
+repo: echarts, user: pissang, location: Shanghai, China, company: N/A, contributions: 3166
+repo: echarts, user: 100pah, location: N/A, company: N/A, contributions: 2462
+repo: echarts, user: Ovilia, location: Shanghai, China, company: N/A, contributions: 1240
+repo: echarts, user: kener, location: china, company: Alipay, contributions: 1137
+repo: echarts, user: plainheart, location: Zhengzhou, China, company: N/A, contributions: 609
+repo: echarts, user: deqingli, location: N/A, company: N/A, contributions: 234
+repo: echarts, user: susiwen8, location: Hangzhou, company: Ant Group, contributions: 219
+repo: echarts, user: yufeng04, location: shanghai, company: bupt, contributions: 45
+repo: echarts, user: loutongbing, location: N/A, company: N/A, contributions: 44
+repo: echarts, user: jiawulin001, location: Shenzhen, China, company: N/A, contributions: 40
+repo: airflow, user: potiuk, location: Warsaw, company: Apache Software Foundation, contributions: 4284
+repo: airflow, user: kaxil, location: United Kingdom, company: @astronomer , contributions: 1793
+repo: airflow, user: mistercrunch, location: San Mateo, CA, company: preset-io, contributions: 1702
+repo: airflow, user: ashb, location: London, company: Astronomer.io, contributions: 886
+repo: airflow, user: mik-laj, location: Warsaw, company: @Snowflakedb, contributions: 821
+repo: airflow, user: jedcunningham, location: Denver, CO, company: @astronomer, contributions: 750
+repo: airflow, user: dstandish, location: N/A, company: N/A, contributions: 630
+repo: airflow, user: amoghrajesh, location: Bangalore, company: Astronomer, contributions: 605
+repo: airflow, user: eladkal, location: Tel Aviv, Israel, company: Amazon, contributions: 594
+repo: airflow, user: uranusjr, location: Taipei, Taiwan, company: @astronomer, contributions: 579
+repo: spark, user: dongjoon-hyun, location: San Jose, company: @apple @apache , contributions: 2027
+repo: spark, user: HyukjinKwon, location: South Korea, company: @Apache @Databricks, contributions: 1918
+repo: spark, user: mateiz, location: San Francisco, CA, company: Databricks Inc., contributions: 1588
+repo: spark, user: zhengruifeng, location: Beijing <> Singapore, company: Databricks, contributions: 1508
+repo: spark, user: rxin, location: San Francisco, company: Databricks, contributions: 1482
+repo: spark, user: cloud-fan, location: Hangzhou, China, company: Databricks, contributions: 1265
+repo: spark, user: LuciferYang, location: Beijing, company: @baidu, contributions: 1071
+repo: spark, user: MaxGekk, location: Belgrade, Serbia, company: Databricks Inc., contributions: 932
+repo: spark, user: pwendell, location: N/A, company: N/A, contributions: 857
+repo: spark, user: yaooqinn, location: Hangzhou, China, company: @NetEase, contributions: 741
+repo: dubbo, user: AlbumenJ, location: Earth, company: Personal, contributions: 1173
+repo: dubbo, user: chickenlj, location: Hangzhou, China, company: Alibaba, contributions: 1134
+repo: dubbo, user: dependabot[bot], location: N/A, company: N/A, contributions: 881
+repo: dubbo, user: beiwei30, location: HangZhou, China, company: @alibaba , contributions: 270
+repo: dubbo, user: CrazyHZM, location: Hangzhou China, company: Ant Group, contributions: 222
+repo: dubbo, user: cvictory, location: N/A, company: N/A, contributions: 158
+repo: dubbo, user: liangfei0201, location: Hangzhou, China, company: Alibaba, contributions: 131
+repo: dubbo, user: mercyblitz, location: Hangzhou, China, company: OpenSource, contributions: 113
+repo: dubbo, user: oldratlee, location: Shanghai ⇌ Hangzhou Zhejiang, China, company: PDD @taobao @aliyun @alibaba, contributions: 105
+repo: dubbo, user: ralf0131, location: Hangzhou, China, company: Alibaba, contributions: 98
