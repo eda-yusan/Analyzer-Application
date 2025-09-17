@@ -8,15 +8,6 @@ Analyzer, Apache organizasyonunun GitHub üzerindeki son güncellenmiş 100 repo
 - Spring Boot ile REST endpoint ile manuel ve otomatik veri çekme desteği
 - Unit testler ile güvenilirlik
 
-## 📦 Teknolojiler
-
-- Java 11
-- Spring Boot 2.7.18
-- Spring Data JPA
-- H2 Database (in-memory)
-- RestTemplate
-- JUnit 5, Mockito
-
 ## 🚀 Nasıl Çalıştırılır?
 
 Bağımlılıkları Yükle (`mvn clean install`)
