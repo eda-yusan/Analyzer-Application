@@ -21,7 +21,6 @@ public class Contributor {
     @GeneratedValue(strategy = GenerationType.IDENTITY)   //GenerationType.IDENTITY: ID alanı veritabanında otomatik artan şekilde oluşturulur
     //Bu anotasyon, @Id alanının değerini otomatik olarak oluştur demektir
     private Long id;
-
     private String repositoryName;
     private String username;
     private String location;

@@ -25,3 +25,9 @@ public class StartupRunner {
 //      bağımlılıklarını enjekte ettiği nesnedir.
 //	      •	@Component ile işaretlenen sınıflar, Spring tarafından taranır ve otomatik olarak uygulama başlatılırken belleğe
 //        (Spring konteynerine) alınır.
+
+//private final GitHubService gitHubService;
+//
+//public StartupRunner(GitHubService gitHubService) {
+//    this.gitHubService = gitHubService;
+//}     @Autowired yerine constructor injection ile yapımı;

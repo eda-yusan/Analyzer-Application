@@ -2,7 +2,6 @@ package com.project.github;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.web.client.RestTemplate;
 
@@ -19,18 +18,6 @@ public class GitHubAnalyzerApplication {
 //	•	Tüm bean’leri oluşturur.
 //	•	Uygulamayı ayakta tutan bir embedded server (Tomcat) başlatır.
     }
-
-    @Bean   // BURASI CONFİGS PACKAGE OLUŞTURULUP ONUN İÇİNDE @CONFİGURATİON public class RestTemplateConfig { }  ŞEKLİNDE VERİLEBİLİRDİ  !!!!!
-    public RestTemplate restTemplate() {
-        return new RestTemplate();
-//        RestTemplate, HTTP istekleri yapmak için kullanılan Spring’in client sınıfıdır.
-//	•	@Bean: Bu metodun(RestTemplate) dönüş değerini Spring’in bean container’ına ekler.
-//	•	Böylece başka sınıflarda @Autowired veya constructor injection ile bu bean kullanılabilir.
-//
-//        Örneğin GitHubService içinde constructor ile kullanılmıştı:
-//        RestTemplate restTemplate
-    }
-
 }
 
 //@SpringBootApplication
