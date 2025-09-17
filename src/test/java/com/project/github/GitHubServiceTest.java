@@ -32,7 +32,7 @@ public class GitHubServiceTest {
     @MockBean
     private RepositoryRepository repositoryRepository;
 
-    @MockBean                                                    //Gerçek veritabanı veya dış API kullanılmaz.Böylece dış dünyaya bağımlı olmadan sadece GitHubService’in davranışı test edilir
+    @MockBean                                                    
     private ContributorRepository contributorRepository;
 
     @MockBean
@@ -68,15 +68,6 @@ public class GitHubServiceTest {
         userMap.put("location", "Earth");
         userMap.put("company", "MockCompany");
 
-
-        // Mock REST çağrıları. 103 e kadar
-//        Testte gerçek GitHub API çağrısı yapılmaz. Bunun yerine restTemplate.exchange(...) çağrılarının döndürdüğü cevaplar önceden
-//        belirlenmiş sahte (mock) veriler ile simüle edilir.
-
-
-
-//        Eğer bu URL’ye bir GET isteği yapılırsa, gerçek sunucuya gitme, onun yerine mockRepoArray isimli
-//    100 sahte repository nesnesini döndür.
         when(restTemplate.exchange(
                 eq("https://api.github.com/orgs/apache/repos?per_page=100&sort=updated"),
                 eq(HttpMethod.GET),
@@ -105,16 +96,11 @@ public class GitHubServiceTest {
         }
 
 
-        // Repository ve Contributor save metodlarını mock'lama
         when(repositoryRepository.save(any(Repository.class))).thenAnswer(invocation -> invocation.getArgument(0));
         when(contributorRepository.save(any(Contributor.class))).thenAnswer(invocation -> invocation.getArgument(0));
 
-        // Test metodu çağrılır. Bu çağrı sayesinde tüm yukarıdaki mock veriler kullanılarak gerçek metod test ediliyor.
         gitHubService.fetchAndSaveData();
 
-        // Verilerin kaydedildiğini doğrula
-        //İlk 5 en çok yıldızlı repo save() metodu ile kaydedilmiş mi?
-        //	•	Kaydedilen repo’ların sırasıyla ismi mock-repo-1 … mock-repo-5 mi?
         ArgumentCaptor<Repository> repoCaptor = ArgumentCaptor.forClass(Repository.class);
         verify(repositoryRepository, times(5)).save(repoCaptor.capture());
         assertThat(repoCaptor.getAllValues()).hasSize(5);
@@ -133,16 +119,7 @@ public class GitHubServiceTest {
             assertThat(contributor.getLocation()).isEqualTo("Earth");
             assertThat(contributor.getCompany()).isEqualTo("MockCompany");
             assertThat(contributor.getContributions()).isGreaterThanOrEqualTo(42);
-//            	•	5 repo * 10 contributor = 50 kayıt var mı?
-//	•	Her contributor’ın:
-//	•	Username’i mock-user-* ile başlıyor mu?
-//	•	Location = Earth
-//	•	Company = MockCompany
-//	•	Contributions sayısı ≥ 42 mi?
 
         }
     }
 }
-
-//Spring Boot ile geliştirdiğin GitHubService sınıfının fetchAndSaveData() metodunun düzgün çalışıp çalışmadığını
-//kontrol etmek için yazılmıştır.
