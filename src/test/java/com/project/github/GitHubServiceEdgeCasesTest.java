@@ -46,9 +46,6 @@ public class GitHubServiceEdgeCasesTest {
         verify(repositoryRepository, never()).save(any());
         verify(contributorRepository, never()).save(any());
 
-//        Amaç: API’den gelen repo listesi null ise hiçbir veri kaydedilmemelidir.
-//        Doğrulama: save() metodlarının hiçbiri çağrılmamalı (never()).
-
     }
 
     @Test
@@ -65,14 +62,11 @@ public class GitHubServiceEdgeCasesTest {
 
         verify(repositoryRepository, never()).save(any());
         verify(contributorRepository, never()).save(any());
-//
-//        API’den gelen repo listesi boş ise hiçbir veri kaydedilmemelidir.
-//                Doğrulama: save() metodlarının hiçbiri çağrılmamalı (never()).
     }
 
     @Test
     public void testFetchAndSaveData_whenContributorsAreNull_shouldOnlySaveRepository() {
-        Repository repo = new Repository(); // örnek bir repo oluşturulmuş
+        Repository repo = new Repository(); 
         repo.setId(1L);
         repo.setName("repo-1");
         repo.setStargazersCount(100);
@@ -110,9 +104,8 @@ public class GitHubServiceEdgeCasesTest {
         repo.setName("repo-1");
         repo.setStargazersCount(100);
 
-        Map<String, Object> contributorMap = new HashMap<>();     //Map burada sadece testler için mock veri üretimi amacıyla kullanılıyor. Amaç: GitHub’tan gelen JSON’ları test ortamında model sınıfı olmadan canlandırmak.
-        contributorMap.put("login", "existing-user");   //Map kullanılmasının nedeni, GitHub API’den gelen JSON yanıtlarını doğrudan Java nesneleriyle eşleştirmek yerine daha esnek bir veri yapısı ile temsil etmektir.
-        //Model sınıfı oluşturmadan Map ile canlandırmak testlerde hızlı, esnek ve pratik bir çözümdür. Ama gerçek projelerde ve daha kapsamlı testlerde tip güvenliği, okunabilirlik ve bakım kolaylığı için mutlaka model/DTO sınıfları tercih edilir.
+        Map<String, Object> contributorMap = new HashMap<>();     
+        contributorMap.put("login", "existing-user");   
         contributorMap.put("contributions", 50);
 
         Map<String, Object> userMap = new HashMap<>();
@@ -146,8 +139,6 @@ public class GitHubServiceEdgeCasesTest {
         gitHubService.fetchAndSaveData();
 
         verify(repositoryRepository).save(any()); //repo kaydeilmeli
-        verify(contributorRepository, never()).save(any()); //katkıcı kaydeddilmemeli
-
-        //Aynı kullanıcı-repo ilişkisi zaten varsa, Contributor tekrar kayıt edilmemeli.
+        verify(contributorRepository, never()).save(any()); 
     }
 }
