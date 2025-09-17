@@ -1,52 +1,3 @@
-//package com.project.github;
-//
-//import com.project.github.model.Contributor;
-//import com.project.github.model.Repository;
-//import com.project.github.repository.ContributorRepository;
-//import com.project.github.repository.RepositoryRepository;
-//import org.junit.jupiter.api.Test;
-//import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
-//
-//import static org.assertj.core.api.Assertions.assertThat;
-//
-//@DataJpaTest
-//public class ContributorRepositoryTest {
-//
-//    @Autowired
-//    private ContributorRepository contributorRepository;
-//
-//    @Autowired
-//    private RepositoryRepository repositoryRepository;
-//
-//    @Test
-//    void testSaveAndExists() {
-//        Repository repo = new Repository();
-//        repo.setId(1L);
-//        repo.setName("repo-x");
-//        repositoryRepository.save(repo);
-//
-//        Contributor c = new Contributor();
-//        c.setUsername("test-user");
-//        c.setContributions(30);
-//        c.setRepository(repo);
-//        contributorRepository.save(c);
-//
-//        boolean exists = contributorRepository.existsByRepositoryAndUsername(repo, "test-user");
-//        assertThat(exists).isTrue();
-//    }
-//}
-
-
-
-
-
-
-
-
-
-
-
 package com.project.github;
 import com.project.github.model.Contributor;
 import com.project.github.repository.ContributorRepository;
@@ -57,12 +8,10 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @DataJpaTest
-//DataJpaTest, Spring Data JPA repository'lerini test etmek için optimize edilmiş bir anotasyondur. Sadece JPA ile ilgili bileşenleri yükler,
-//in-memory veritabanı kullanır ve testlerin hızlı, izole çalışmasını sağlar
 public class ContributorRepositoryTest {
 
     @Autowired
-    private ContributorRepository contributorRepository;  //ContributorRepository sınıfı buraya otomatik olarak enjekte edilir (dependency injection).
+    private ContributorRepository contributorRepository;  
 
     @Test
     void testSaveAndExists() {
@@ -74,16 +23,6 @@ public class ContributorRepositoryTest {
 
         boolean exists = contributorRepository.existsByRepositoryNameAndUsername("repo-x", "test-user");
         assertThat(exists).isTrue();
-
-//        1.	Yeni bir Contributor nesnesi oluşturulur ve gerekli alanlar doldurulur:
-//	•	username: "test-user"
-//	•	repositoryName: "repo-x"
-//	•	contributions: 30
-//        2.	Bu nesne contributorRepository.save(c) ile veritabanına kaydedilir.
-//        3.	Ardından existsByRepositoryNameAndUsername("repo-x", "test-user") metodu çağrılır ve kayıt olup olmadığı sorgulanır.
-//        4.	assertThat(exists).isTrue(); ile test doğrulanır:
-//	•	Eğer kayıt başarılıysa ve sorgu doğru çalışıyorsa exists true döner ve test geçer.
-//	•	Aksi halde test başarısız olur.
 
     }
 }
