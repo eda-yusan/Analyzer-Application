@@ -5,7 +5,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
 
-public class OutputWriter {  //Sınıfın amacı, Bir List<String> içindeki satırları, belirtilen dosya adına yazmak.
+public class OutputWriter {  
 
     public static void writeToFile(List<String> lines, String fileName) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName))) {
@@ -20,8 +20,3 @@ public class OutputWriter {  //Sınıfın amacı, Bir List<String> içindeki sat
         }
     }
 }
-
-
-//tam olarak try-with-resources yapısını kullanır.
-//Çünkü BufferedWriter, Closeable arayüzünü implemente eder, bu yüzden try()
-// bloğu içinde tanımlandığında otomatik olarak kapatılır.
