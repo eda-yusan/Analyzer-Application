@@ -27,15 +27,5 @@ public class RepositoryRepositoryTest {
         assertThat(found).isNotNull();
         assertThat(found.getName()).isEqualTo("test-repo");
 
-//        1.	Yeni bir Repository nesnesi oluşturulur ve alanları doldurulur:
-//	•	            id = 1
-//	•	            name = "test-repo"
-//	•	            stargazersCount = 50
-//        2.	repositoryRepository.save(repo); ile nesne veritabanına kaydedilir.
-//        3.	repositoryRepository.findById(1L) ile veritabanından aynı id’ye sahip repo aranır.
-//        4.	Bulunursa (isNotNull()), test doğrulaması yapılır:
-//	•	Bulunan repo nesnesinin adı "test-repo" olmalıdır.
-//        5.	Eğer veri kaydedilip geri okunabiliyorsa test başarılıdır.
-
     }
 }
