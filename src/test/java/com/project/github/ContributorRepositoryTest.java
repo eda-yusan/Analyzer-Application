@@ -1,5 +1,53 @@
-package com.project.github;
+//package com.project.github;
+//
+//import com.project.github.model.Contributor;
+//import com.project.github.model.Repository;
+//import com.project.github.repository.ContributorRepository;
+//import com.project.github.repository.RepositoryRepository;
+//import org.junit.jupiter.api.Test;
+//import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+//
+//import static org.assertj.core.api.Assertions.assertThat;
+//
+//@DataJpaTest
+//public class ContributorRepositoryTest {
+//
+//    @Autowired
+//    private ContributorRepository contributorRepository;
+//
+//    @Autowired
+//    private RepositoryRepository repositoryRepository;
+//
+//    @Test
+//    void testSaveAndExists() {
+//        Repository repo = new Repository();
+//        repo.setId(1L);
+//        repo.setName("repo-x");
+//        repositoryRepository.save(repo);
+//
+//        Contributor c = new Contributor();
+//        c.setUsername("test-user");
+//        c.setContributions(30);
+//        c.setRepository(repo);
+//        contributorRepository.save(c);
+//
+//        boolean exists = contributorRepository.existsByRepositoryAndUsername(repo, "test-user");
+//        assertThat(exists).isTrue();
+//    }
+//}
 
+
+
+
+
+
+
+
+
+
+
+package com.project.github;
 import com.project.github.model.Contributor;
 import com.project.github.repository.ContributorRepository;
 import org.junit.jupiter.api.Test;

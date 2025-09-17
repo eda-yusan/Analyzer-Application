@@ -56,23 +56,24 @@ Uç senaryolar (edge cases) test edilmiştir:
 Bağımlılıkları Yükle (`mvn clean install`)
 
 ### 1. Adım
-`GitHubAnalyzerApplication`'ı run et. (5-6 sn bekleme süresi vardır. Sql işlemlerinden dolayı)
+`GitHubAnalyzerApplication'ı run et.` (5-6 sn bekleme süresi vardır. Sql işlemlerinden dolayı)
 
-Uygulama başladığında otomatik olarak GitHub API’den verileri çeker ve veritabanına kaydeder. Çıktı terminalde görünür.
+Uygulama başladığında otomatik olarak GitHub API’den verileri çeker ve veritabanına kaydeder. Çıktı output.txt de görünür.
 
 ### 2. Adım
-`GitHubAnalyzerApplication'ı run ettikten sonra`;  
+`GitHubAnalyzerApplication'ı run ettikten sonra  
+http://localhost:8080/fetch e istek gönder.` 
 
-http://localhost:8080/fetch e istek gönder.  Bu endpoint’e GET isteği göndererek verileri manuel de çekmiş olacaksınız.
-GitHub API’den veri çekilip veritabanına kaydedilecek ve tarayıcıda "GitHub data fetched and saved successfully!" mesajı dönecektir. Terminalde proje çıktısını görebilirsiniz.   
+Bu endpoint’e GET isteği gönderilerek veriler manuel çekilmiş olur 
+ve JSON formatında repository döner.
 
-http://localhost:8080/h2-console a istek göndererek de H2 veritabanına bağlanmak için gereken bağlantı ayarları görünecektir.
+http://localhost:8080/contributors a istek göndererek contributor JSON formatında listelenir
 
 ### 3. Adım
 
 `run.bat` dosyasını çalıştır. 
 
-Uygulama başladığında otomatik olarak GitHub API’den verileri çeker ve veritabanına kaydeder. Çıktı terminalde görünür. Aynı zamanda `output.txt` dosyasında çıktı kaydedilir.
+Uygulama başladığında otomatik olarak GitHub API’den verileri çeker ve veritabanına kaydeder. Çıktı `output.txt` dosyasında kaydedilir.
 
 
 

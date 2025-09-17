@@ -3,7 +3,6 @@ package com.project.github;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.PropertySource;
-import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 @PropertySource("classpath:application-secret.properties")
@@ -28,3 +27,4 @@ public class GitHubAnalyzerApplication {
 //        3.	@ComponentScan: Uygulamanın bulunduğu paketteki tüm bileşenleri (@Service, @Controller, @Repository vb.) otomatik olarak tarar.
 //
 //Bu sayede uygulama “sıfır konfigürasyonla” çalışabilir hale gelir.
+
